@@ -1,0 +1,15 @@
+{
+    "contents" : "How to use this simple Energy Calculator\n========================================\n\nThe Energy Calculator consist of a single small scrip written in the R language, which provides a function that accepts a range or parameters.\nThe function has to be loades as::\n  \n  source(\"./Energy_Calculator.r\"\n\nThat means that the file 'Energy_Calculator.r' has to be on the working path of the main script. \n\nsee the folder './Examples' for some simple examples on how to use this function. ",
+    "created" : 1378419559326.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1520417714",
+    "id" : "F21836E",
+    "lastKnownWriteTime" : 1378419606,
+    "path" : "~/workspace/R/Energy_Calculator_Munoz/readme.txt",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "text"
+}

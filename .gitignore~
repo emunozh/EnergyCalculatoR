@@ -9,3 +9,6 @@
 
 # Build folder for rst documentation
 ./_build
+
+# vim swap files
+*.swp

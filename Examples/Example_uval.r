@@ -23,7 +23,7 @@ U.Values <- matrix(c(
   0.4,	0.2,	1.6),   # 09
   3,Buildings.Number)
 
-Heat.Demand = rep(0,Buildings.Number)
+Heat.Demand <- rep(0,Buildings.Number)
 for (i in 1:Buildings.Number){
   UvalW <- U.Values[1,i]
   UvalR <- U.Values[2,i]
@@ -33,8 +33,6 @@ for (i in 1:Buildings.Number){
                               Building.UvalWindow = UvalWindow)
   Heat.Demand[i] <- temp.2$Qhs
 }
-
-seq(1910,2010,12)
 
 # bar plot
 barplot(Heat.Demand,

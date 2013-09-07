@@ -212,7 +212,7 @@ Energy_Calculator <- function(
   ## Heat losses Ql
   ##################
   
-  ##ventilation loss Hv !! Onlly for natural ventilation
+  ##ventilation loss Hv !! Only for natural ventilation
   # AirCRate = air change rate [h-1]
   # V volume of air in heated building (according to EnEV it obtains V = 0,8* Ve)
   # pL* CPL heat storage capacity of air = 0,34 [Wh/(m²K)]
@@ -223,7 +223,7 @@ Energy_Calculator <- function(
   
   ##thermal bridge addition
   # Uwb correction value for thermal bridges [W/m²K]
-  # A total heat transmitting bulding envelope [m²]
+  # A total heat transmitting building envelope [m²]
   Building.A.Roof  <- 2*(Building.Dim[2]*((Building.Dim[1]/2)/cos(Building.RoofSlope*pi/180)))
   Building.A.Wall.1 <- Building.Dim[1]*Building.h
   Building.A.Wall.2 <- Building.Dim[2]*Building.h
@@ -234,7 +234,7 @@ Energy_Calculator <- function(
   
   ##transmission losses Ht
   # Temperature correction factor Fx
-  # Ti(Theta i) internal temperture [K]
+  # Ti(Theta i) internal temperature [K]
   # Tu(M) Temperature in unheated space [K]
   # Te(M) Ambient (=external) temperature [K]
   
@@ -259,7 +259,7 @@ Energy_Calculator <- function(
   # Hu Heat losses referring to heat loss surface [W/K]
   # Ls thermal guide value for ground bordering surfaces [W/K]
   # Hwb thermal bridges addition [W/K]
-  # Htfh Specific transmission heat loss by buliding parts with integrated panel heating [W/K]
+  # Htfh Specific transmission heat loss by building parts with integrated panel heating [W/K]
   # Ht = sum (U) * sum (A) + Hu + Ls + Hwb + Htfh
   Heat.loss.Htu <-
     (((2*Building.A.Wall.1*(1-Building.Windows) + 
@@ -283,7 +283,7 @@ Energy_Calculator <- function(
   ## Monthly heat demand Qh
   ##################
   
-  # Ql(M) sum of monthly heat losss due to transmisson and ventilation [kWh/M]
+  # Ql(M) sum of monthly heat loss due to transmission and ventilation [kWh/M]
   # Qg(M) sum of monthly heat gains [kWh/M]
   # n(M) monthly utilization factor for the gains [-]
   Heat.demand.Thermal = Building.StorageCapacity * Building.Ve / Heat.loss.H
@@ -300,7 +300,7 @@ Energy_Calculator <- function(
     Heat.demand.Qhm[m] <- Heat.loss.Ql[m] - Heat.demand.n * Heat.gains.Qg[m]
   }
   
-  # substaction of negative heat demand
+  # subtraction of negative heat demand
   Heat.demand.Qhm[Heat.demand.Qhm < 0] <- 0
   Heat.demand.Qh <- sum(Heat.demand.Qhm)
   
@@ -327,4 +327,3 @@ Energy_Calculator <- function(
   }
   return(result)
 }
-

@@ -12,7 +12,7 @@ library(ggplot2)
 setwd("~/workspace/R/Energy_Calculator_Munoz")
 
 # Load local functions
-source("./Energy_Calculator.r")
+source("./Energy_CalculatoR.r")
 
 iter <- seq(0,360,1)
 #iter <- c(0,90,180,270,360)
@@ -23,7 +23,7 @@ Irradiation.Sum = rep(0,length(iter))
 Building.Dim <- c(12,6) 
 for (i in 1:length(iter)){
   BO <- iter[i]
-  temp.2 <- Energy_Calculator(Building.Orientation = BO,
+  temp.2 <- Energy_CalculatoR(Building.Orientation = BO,
                               Building.Dim = Building.Dim)
   Heat.Demand[i] <- temp.2$Qhs
   Heat.Gains.Solar[i] <- temp.2$Ss

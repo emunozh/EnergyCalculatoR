@@ -5,12 +5,12 @@
 setwd("~/workspace/R/Energy_Calculator_Munoz")
 
 # Load local functions
-source("./Energy_Calculator.r")
+source("./Energy_CalculatoR.r")
 Climate.MonthsNames <- c("January","February","March","April",
                          "May","June","July","August",
                          "September","October","November","December")
 
-temp.1 <- Energy_Calculator(Building.Orientation = 0,
+temp.1 <- Energy_CalculatoR(Building.Orientation = 0,
                             Output.Type = "Month")
 Qhm <- temp.1$Qhm
 barplot(Qhm,

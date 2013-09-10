@@ -7,7 +7,7 @@
 setwd("~/workspace/R/Energy_Calculator_Munoz")
 
 # Load local functions
-source("./Energy_Calculator.r")
+source("./Energy_CalculatoR.r")
 
 Buildings.Number <- 9
 
@@ -28,7 +28,7 @@ for (i in 1:Buildings.Number){
   UvalW <- U.Values[1,i]
   UvalR <- U.Values[2,i]
   UvalWindow <- U.Values[3,i]
-  temp.2 <- Energy_Calculator(Building.UvalW = UvalW, 
+  temp.2 <- Energy_CalculatoR(Building.UvalW = UvalW, 
                               Building.UvalR = UvalR, 
                               Building.UvalWindow = UvalWindow)
   Heat.Demand[i] <- temp.2$Qhs

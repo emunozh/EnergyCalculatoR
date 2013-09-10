@@ -1,5 +1,5 @@
 # Monthly heat balance and annual energy demand of buildings
-Energy_Calculator <- function(
+Energy_CalculatoR <- function(
   General.Name = "No Name", 
   General.PlotOption = FALSE, 
   General.PlotName = "No Name",

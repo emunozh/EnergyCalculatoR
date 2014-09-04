@@ -1,11 +1,10 @@
-# History files
+# R files
 .Rhistory
+.RData
+.Rproj.user
 
 # Example code in package build process
 *-Ex.R
-
-# Rproj user
-.Rproj.user
 
 # Build folder for rst documentation
 ./_build

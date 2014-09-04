@@ -39,3 +39,4 @@ doh + geom_line(colour = "red", size = 1)  +
   coord_polar(direction = -1, start = -pi/2) +
   labs(title = "Heat demand for all possible building orientations") + 
   scale_x_continuous(breaks=seq(0, 360, 15))
+
